@@ -1,0 +1,3 @@
+# first install new ssh key using ssh-keygen with no parameter
+# then update the  server list and passFile
+# run copy_id.sh to copy current public key into the servers within server file

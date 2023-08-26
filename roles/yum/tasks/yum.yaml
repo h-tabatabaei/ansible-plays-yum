@@ -1,0 +1,13 @@
+- name: update all packages
+  hosts: 192.168.57.3
+  become: true
+  
+  tasks:
+    - name: update all packages - this is like running the 'yum update' command
+      ansible.builtin.yum:
+        name: '*'
+        state: present
+        update_cache: true
+      register: yum_output
+
+    - debug: var=yum_output

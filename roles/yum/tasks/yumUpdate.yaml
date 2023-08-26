@@ -1,0 +1,15 @@
+- name: update all packages
+  hosts: 192.168.57.3
+  become: true
+  
+  tasks:
+    - name: 
+      ansible.builtin.shell:
+        cmd: yum clean all
+
+    - name: update yum update -y
+      ansible.builtin.shell:
+        cmd: yum update 
+      register: yum_output
+
+    - debug: var=yum_output

@@ -1,0 +1,11 @@
+[all:vars]
+ansible_connection=ssh
+ansible_user=root
+
+[BMI_HOSTS]
+1.1.1.1		#db	ol7
+2.2.2.2		ansible_python_interpreter=/usr/local/bin/python2.7 #Archive		ol6
+3.3.3.3		#AppGW 1	ol7 Jump From x.x.x.x
+4.4.4.4		ansible_python_interpreter=/usr/local/bin/python2.7 #appX		ol6
+5.5.5.5		#DG		ol7
+6.6.6.6		#elk	ol7
